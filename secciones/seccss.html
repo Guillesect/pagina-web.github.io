@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Web4U</title>
+    <link rel="stylesheet" href="../styles.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Aprendiendo CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html" title="Volver a la página principal">Volver al inicio</a></li>
+                <li><a href="../secciones/sechtml.html" title="Información sobre HTML">Ver información de HTML</a></li>
+                <li><a href="../secciones/secsvg.html" title="Información sobre SVG">Ver información de SVG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Ejemplos de CSS</h2>
+
+       
+        <h3>Propiedad: background-color</h3>
+        <p>La propiedad <code>background-color</code> se usa para establecer el color de fondo de un elemento.</p>
+        <pre><code>div {
+    background-color: lightblue;
+}</code></pre>
+        <p>Resultado:</p>
+        <div style="background-color: lightblue; padding: 20px;">
+            Este div tiene un fondo de color azul claro.
+        </div>
+
+       
+        <h3>Propiedad: margin</h3>
+        <p>La propiedad <code>margin</code> define el espacio alrededor de un elemento.</p>
+        <pre><code>div {
+    margin: 20px;
+}</code></pre>
+        <p>Resultado:</p>
+        <div style="margin: 20px; background-color: lightcoral; padding: 10px;">
+            Este div tiene un margen de 20px.
+        </div>
+
+       
+        <h3>Propiedad: font-family</h3>
+        <p>La propiedad <code>font-family</code> permite definir la fuente de texto de un elemento.</p>
+        <pre><code>p {
+    font-family: 'Arial', sans-serif;
+}</code></pre>
+        <p>Resultado:</p>
+        <p style="font-family: 'Arial', sans-serif;">
+            Este párrafo tiene la fuente Arial.
+        </p>
+
+        
+        <h3>Propiedad: text-align</h3>
+        <p>La propiedad <code>text-align</code> se utiliza para alinear el texto dentro de un elemento.</p>
+        <pre><code>h1 {
+    text-align: center;
+}</code></pre>
+        <p>Resultado:</p>
+        <h1 style="text-align: center;">
+            Título centrado
+        </h1>
+
+       
+        <h3>Propiedad: font-size</h3>
+        <p>La propiedad <code>font-size</code> ajusta el tamaño de la fuente de un elemento.</p>
+        <pre><code>p {
+    font-size: 40px;
+}</code></pre>
+        <p>Resultado:</p>
+        <p style="font-size: 40px;">
+            Este párrafo tiene un tamaño de fuente de 40px.
+        </p>
+        
+       
+        <button id="downloadBtn">Descargar como PDF</button>
+
+        <p>Más información: <a href="https://www.w3schools.com/css/default.asp" title="Especificación">Especificación CSS en w3schools</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Web4U. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+          
+            const element = document.body;
+
+          
+            html2pdf()
+                .from(element) 
+                .save('pagina_css.pdf'); 
+        });
+    </script>
+</body>
+</html>
+

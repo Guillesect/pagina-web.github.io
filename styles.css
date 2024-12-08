@@ -1,0 +1,96 @@
+/* Archivo: styles.css */
+
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración general del cuerpo */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    display: flex;
+    flex-direction: column; /* Apilar header, main y footer */
+    min-height: 100vh; /* Altura mínima para cubrir toda la pantalla */
+}
+
+/* Estilo para el header */
+header {
+    background-color: #333333;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Estilo para el main */
+main {
+    flex: 1; /* Toma el espacio disponible entre header y footer */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: flex-start; /* Centrado vertical alineado al inicio */
+    padding: 20px;
+}
+
+/* Estilo para las secciones del contenido */
+section {
+    text-align: center;
+}
+
+/* Contenedor de la cuadrícula de logotipos */
+.grid-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 250px;
+}
+
+.grid-item h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+}
+
+.grid-item p {
+    margin-top: 0;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #333333;
+    padding: 10px 20px;
+    text-align: center;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Web4U</title>
+    <link rel="stylesheet" href="../styles.css">
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Aprendiendo HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html" title="Volver a la página principal">Volver al inicio</a></li>
+                <li><a href="../secciones/secsvg.html" title="Información sobre SVG">Ver información de SVG</a></li>
+                <li><a href="../secciones/seccss.html" title="Información sobre CSS">Ver información de CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Ejemplo de etiquetas HTML</h2>
+        <h3>&lt;h1&gt; - Encabezado principal</h3>
+        <p>La etiqueta <code>&lt;h1&gt;</code> se usa para el encabezado principal de una página web.</p>
+        <pre><code>&lt;h1&gt;Mi primer encabezado&lt;/h1&gt;</code></pre>
+        <p>Resultado:</p>
+        <img src="https://www.hubspot.com/hubfs/media/h1html.png" alt="Resultado del código HTML" width="300">
+        <h3>&lt;p&gt; - Escribir párrafos</h3>
+        <p>La etiqueta <code>&lt;p&gt;</code> se usa para escribir párrafos en la página web.</p>
+        <pre><code>&lt;p&gt;Mi primer párrafo&lt;/p&gt;</code></pre>
+        <p>Resultado:</p>
+        <img src="https://creativo1005.wordpress.com/wp-content/uploads/2015/08/ejemploparrafo.png" alt="Resultado del código HTML" width="500">
+        <h3>&lt;a&gt; - Insertar enlaces</h3>
+        <p>La etiqueta <code>&lt;a&gt;</code> se usa para poder insertar enlaces en una página web.</p>
+        <p>El destino del enlace se especifica en el atributo href. 
+
+            Los atributos se utilizan para proporcionar información adicional sobre elementos HTML.</p>
+        <pre><code>&lt;a href="https://ejemplo.com"&gt;Enlace de ejemplo&lt;/a&gt;</code></pre>
+        <p>Resultado:</p>
+        <img src="https://www.iessantabarbara.es/departamentos/tic/2bachillerato/html/imagenes/ejercicios/imagenejercicio10.png" alt="Resultado del código HTML" width="300">
+        <h3>&lt;img&gt; - Insertar imágenes</h3>
+        <p>La etiqueta <code>&lt;img&gt;</code> se usa para insertar imágenes en una página web.</p>
+        <p>El archivo fuente (src), texto alternativo (alt), ancho y alto se proporcionan como atributos.</p>
+        <pre><code>&lt;img src="Miimagen.jpg" alt="primera imagen" width="100" height="140"&gt;</code></pre>
+        <p>Resultado:</p>
+        <img src="https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/basic-image.png" alt="Resultado del código HTML" width="300">
+        <h3>&lt;body&gt; - Cuerpo de la página</h3>
+        <p>La etiqueta <code>&lt;body&gt;</code> es la parte visible del documento HTML de una página web.</p>
+        <pre><code>&lt;body&gt;&lt;p&gt;Mi primer párrafo&lt;/p&gt;&lt;/body&gt;</code></pre>
+        <p>Resultado:</p>
+        <img src="https://creativo1005.wordpress.com/wp-content/uploads/2015/08/ejemplobody.png" alt="Resultado del código HTML" width="500">
+        <button id="download-pdf">Generar PDF</button>
+        <p>Más información: <a href="https://www.w3schools.com/html/default.asp" title="Especificación HTML del W3C">Especificación HTML en w3schools</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Web4U. Todos los derechos reservados.</p>
+    </footer>
+
+   
+    <script>
+        document.getElementById('download-pdf').addEventListener('click', function () {
+           
+            const element = document.body;
+
+            
+            html2pdf()
+                .from(element) 
+                .save('pagina_html.pdf');  
+        });
+    </script>
+</body>
+</html>
